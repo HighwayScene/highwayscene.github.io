@@ -29,7 +29,7 @@
 
           <div class="publication-authors">
             <span>Alexander Baumann<sup>1</sup></span>
-            <span>Marcel Voßhans<sup>1</sup></span>
+            <span>Marcel Vosshans<sup>1</sup></span>
             <span>Thao Dang<sup>1</sup></span>
           </div>
           <p class="publication-affiliation">
@@ -42,10 +42,10 @@
           </p>
 
           <div class="publication-links">
-            <span class="button is-dark is-rounded is-disabled" aria-disabled="true">
+            <a class="button is-dark is-rounded" href="https://arxiv.org/abs/2608.14868" rel="noopener">
               <span class="icon"><i class="fas fa-file-pdf"></i></span>
-              <span>arXiv coming soon</span>
-            </span>
+              <span>Paper (arXiv)</span>
+            </a>
             <span class="button is-dark is-rounded is-disabled" aria-disabled="true">
               <span class="icon"><i class="fab fa-github"></i></span>
               <span>Code coming soon</span>
@@ -54,10 +54,10 @@
               <span class="icon"><i class="fas fa-database"></i></span>
               <span>HighwayScene data</span>
             </a>
-            <span class="button is-dark is-rounded is-disabled" aria-disabled="true">
+            <a class="button is-dark is-rounded" href="https://huggingface.co/datasets/iis-esslingen/CoopScenes/tree/main/benchmark/3d_object_labels" rel="noopener">
               <span class="icon"><i class="fas fa-tags"></i></span>
-              <span>CoopScenes labels coming soon</span>
-            </span>
+              <span>CoopScenes labels</span>
+            </a>
           </div>
         </div>
       </div>
@@ -259,7 +259,7 @@
         <div class="resource-grid">
           <article class="resource-card">
             <span class="resource-icon"><i class="fas fa-file-pdf"></i></span>
-            <div><h3>Paper</h3><p>Accepted at IEEE ITSC 2026.</p><span class="resource-status">arXiv link coming soon</span></div>
+            <div><h3>Paper</h3><p>Accepted at IEEE ITSC 2026.</p><a class="resource-status" href="https://arxiv.org/abs/2608.14868" rel="noopener">Read on arXiv</a></div>
           </article>
           <article class="resource-card">
             <span class="resource-icon"><i class="fab fa-github"></i></span>
@@ -275,7 +275,7 @@
           </article>
           <article class="resource-card">
             <span class="resource-icon"><i class="fas fa-tags"></i></span>
-            <div><h3>CoopScenes labels</h3><p>Static/dynamic point-wise labels added to the original CoopScenes dataset.</p><span class="resource-status">Direct dataset link coming soon</span></div>
+            <div><h3>CoopScenes labels</h3><p>Static/dynamic point-wise labels added to the original CoopScenes dataset.</p><a class="resource-status" href="https://huggingface.co/datasets/iis-esslingen/CoopScenes/tree/main/benchmark/3d_object_labels" rel="noopener">View labels on Hugging Face</a></div>
           </article>
         </div>
       </div>
@@ -284,7 +284,16 @@
     <section class="section citation-section">
       <div class="container is-max-desktop">
         <h2 class="title is-3">Citation</h2>
-        <p class="coming-soon">BibTeX will be added with the final proceedings metadata.</p>
+        <pre class="bibtex"><code>@misc{baumann2026beamwise,
+  author        = {Alexander Baumann and Marcel Vosshans and Thao Dang},
+  title         = {Beam-Wise Statistical Background Subtraction for Static Roadside {LiDAR}: A Cross-Sensor Benchmark Study},
+  year          = {2026},
+  eprint        = {2608.14868},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2608.14868},
+  note          = {Accepted at IEEE ITSC 2026}
+}</code></pre>
       </div>
     </section>
   </main>
