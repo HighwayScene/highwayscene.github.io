@@ -11,280 +11,306 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&amp;family=Noto+Sans:wght@400;500;700&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+  <link rel="icon" href="static/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="static/css/index.css">
 </head>
 <body>
-  <main>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="#" aria-label="HighwayScene home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>HighwayScene</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#dataset">Dataset</a>
+        <a href="#results">Results</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
     <section class="hero">
-      <div class="hero-body">
-        <div class="container is-max-desktop has-text-centered">
-          <p class="publication-label">HighwayScene · Static Roadside LiDAR</p>
-          <h1 class="title publication-title">
-            Beam-Wise Statistical Background Subtraction for Static Roadside LiDAR:
-            A Cross-Sensor Benchmark Study
-          </h1>
+      <div class="container hero-content">
+        <p class="hero-kicker">IEEE ITSC 2026 · Open paper and dataset</p>
+        <h1>
+          Beam-Wise Statistical Background Subtraction
+          <span>for Static Roadside LiDAR: A Cross-Sensor Benchmark Study</span>
+        </h1>
+        <p class="hero-summary">
+          Learning the static world beam by beam—without semantic training labels—and
+          benchmarking it across rotating, solid-state, and FMCW LiDAR.
+        </p>
 
-          <div class="publication-authors">
-            <span>Alexander Baumann<sup>1</sup></span>
-            <span>Marcel Vosshans<sup>1</sup></span>
-            <span>Thao Dang<sup>1</sup></span>
-          </div>
-          <p class="publication-affiliation">
-            <sup>1</sup><a href="https://www.hs-esslingen.de/en/research/projects/research-institutes-groups/iis-institute-for-intelligent-systems" rel="noopener">
-              Institute for Intelligent Systems, Esslingen University of Applied Sciences, Germany
+        <div class="publication-meta">
+          <p class="authors">Alexander Baumann · Marcel Vosshans · Thao Dang</p>
+          <p>
+            <a href="https://www.hs-esslingen.de/en/research/projects/research-institutes-groups/iis-institute-for-intelligent-systems" rel="noopener">
+              Institute for Intelligent Systems, Esslingen University of Applied Sciences
             </a>
           </p>
-          <p class="publication-venue">
-            Accepted at the 29th IEEE International Conference on Intelligent Transportation Systems (ITSC 2026)
-          </p>
-
-          <div class="publication-links">
-            <a class="button is-dark is-rounded" href="https://arxiv.org/abs/2608.14868" rel="noopener">
-              <span class="icon"><i class="fas fa-file-pdf"></i></span>
-              <span>Paper (arXiv)</span>
-            </a>
-            <span class="button is-dark is-rounded is-disabled" aria-disabled="true">
-              <span class="icon"><i class="fab fa-github"></i></span>
-              <span>Code coming soon</span>
-            </span>
-            <a class="button is-dark is-rounded" href="https://huggingface.co/datasets/iis-esslingen/HighwayScene" rel="noopener">
-              <span class="icon"><i class="fas fa-database"></i></span>
-              <span>HighwayScene data</span>
-            </a>
-            <a class="button is-dark is-rounded" href="https://huggingface.co/datasets/iis-esslingen/CoopScenes/tree/main/benchmark/3d_object_labels" rel="noopener">
-              <span class="icon"><i class="fas fa-tags"></i></span>
-              <span>CoopScenes labels</span>
-            </a>
-          </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section teaser-section">
-      <div class="container is-max-widescreen">
-        <figure class="teaser">
-          <img src="static/images/highwayscene-overview.svg" alt="Synchronized HighwayScene observations from three roadside LiDAR technologies.">
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://arxiv.org/abs/2608.14868" rel="noopener">
+            <i class="fas fa-file-lines" aria-hidden="true"></i>
+            Read the paper
+          </a>
+          <a class="button button-secondary" href="https://huggingface.co/datasets/iis-esslingen/HighwayScene" rel="noopener">
+            <i class="fas fa-database" aria-hidden="true"></i>
+            Explore the dataset
+          </a>
+          <span class="button button-disabled" aria-disabled="true">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            Code coming soon
+          </span>
+        </div>
+
+        <figure class="hero-visual">
+          <img
+            src="static/images/highwayscene-overview.svg"
+            alt="Synchronized HighwayScene point clouds from rotating time-of-flight, FMCW, and solid-state LiDAR."
+          >
           <figcaption>
-            Synchronized HighwayScene observations from the Ouster OS0, AEVA Aeries II, and Blickfeld QB2.
-            Dynamic foreground points are shown in red.
+            <span>One roadside scene, observed by three LiDAR technologies.</span>
+            <span class="legend">
+              <span><i class="legend-dot background-dot"></i>Static background</span>
+              <span><i class="legend-dot foreground-dot"></i>Dynamic foreground</span>
+            </span>
           </figcaption>
         </figure>
-      </div>
-    </section>
 
-    <section class="section stats-section" aria-label="Project summary">
-      <div class="container is-max-desktop">
-        <div class="stats-grid">
-          <div class="stat"><strong>3</strong><span>LiDAR technologies</span></div>
-          <div class="stat"><strong>5,998</strong><span>HighwayScene records</span></div>
-          <div class="stat"><strong>5</strong><span>evaluated scenes</span></div>
-          <div class="stat"><strong>&gt;90%</strong><span>best filtered F1 per scene</span></div>
+        <div class="hero-stats" role="list" aria-label="Benchmark at a glance">
+          <div role="listitem"><strong>3</strong><span>LiDAR technologies</span></div>
+          <div role="listitem"><strong>5,998</strong><span>HighwayScene records</span></div>
+          <div role="listitem"><strong>4</strong><span>background models</span></div>
+          <div role="listitem"><strong>5</strong><span>benchmark scenes</span></div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container is-max-desktop">
-        <p class="eyebrow">Overview</p>
-        <h2 class="title is-3">Background subtraction without semantic training labels</h2>
-        <div class="content lead-copy">
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-heading centered-heading">
+          <p class="eyebrow">The work</p>
+          <h2>A practical benchmark for static roadside LiDAR</h2>
           <p>
-            We study statistical background subtraction for statically mounted roadside LiDAR.
-            The methods learn the range behavior of each beam from an unlabeled recording and identify
-            points that are inconsistent with the learned static background during inference.
-          </p>
-          <p>
-            The benchmark combines HighwayScene—a synchronized recording from solid-state, rotating
-            time-of-flight, and FMCW LiDAR—with four urban CoopScenes sequences. It compares four
-            beam-wise model families and spatial consistency filters under a shared evaluation protocol.
+            Statistical models learn the expected range of every beam from a short,
+            unlabeled sequence and flag points that do not match the static scene.
           </p>
         </div>
 
-        <div class="columns contribution-grid">
-          <div class="column">
-            <div class="contribution-item">
-              <span class="contribution-icon"><i class="fas fa-road"></i></span>
-              <h3 class="title is-5">New multi-LiDAR dataset</h3>
-              <p>A synchronized static highway scene recorded with three complementary sensing technologies.</p>
-            </div>
-          </div>
-          <div class="column">
-            <div class="contribution-item">
-              <span class="contribution-icon"><i class="fas fa-chart-simple"></i></span>
-              <h3 class="title is-5">Four model families</h3>
-              <p>Density-aware CFTA, quantile-constrained Gaussian, beam-wise GMM, and image-based MOG2.</p>
-            </div>
-          </div>
-          <div class="column">
-            <div class="contribution-item">
-              <span class="contribution-icon"><i class="fas fa-code-branch"></i></span>
-              <h3 class="title is-5">Reproducible benchmark</h3>
-              <p>Released configurations, reference results, dataset adapters, and extensible method interfaces.</p>
-            </div>
-          </div>
+        <div class="contribution-grid">
+          <article class="contribution-card">
+            <span class="card-index">01</span>
+            <span class="card-icon"><i class="fas fa-wave-square" aria-hidden="true"></i></span>
+            <h3>Model every beam</h3>
+            <p>
+              Four lightweight model families capture the range statistics of a fixed scan
+              pattern—without semantic annotation or a pretrained network.
+            </p>
+          </article>
+          <article class="contribution-card">
+            <span class="card-index">02</span>
+            <span class="card-icon"><i class="fas fa-arrows-left-right" aria-hidden="true"></i></span>
+            <h3>Compare across sensors</h3>
+            <p>
+              The same evaluation spans rotating time-of-flight, solid-state time-of-flight,
+              and FMCW LiDAR as well as four urban CoopScenes sequences.
+            </p>
+          </article>
+          <article class="contribution-card">
+            <span class="card-index">03</span>
+            <span class="card-icon"><i class="fas fa-box-open" aria-hidden="true"></i></span>
+            <h3>Reuse the benchmark</h3>
+            <p>
+              Data, labels, a typed reader, final configurations, and modular method and
+              dataset interfaces support reproduction and follow-up work.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-muted">
-      <div class="container is-max-desktop">
-        <p class="eyebrow">Method</p>
-        <h2 class="title is-3">Beam-wise modeling at a glance</h2>
-        <p class="section-intro">
-          The approach assumes a fixed, known scan pattern and a temporally stable static background.
-          Training requires only a short unlabeled point-cloud sequence.
-        </p>
-        <div class="method-flow" aria-label="Background subtraction processing pipeline">
-          <div class="method-step">
-            <span class="step-number">1</span>
-            <strong>Observe</strong>
-            <span>Collect 600 static-sensor frames.</span>
+    <section class="section dataset-section" id="dataset">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">HighwayScene dataset</p>
+            <h2>Same traffic. Same viewpoint. Different scan geometry.</h2>
           </div>
-          <span class="flow-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-          <div class="method-step">
-            <span class="step-number">2</span>
-            <strong>Model</strong>
-            <span>Fit independent range statistics per beam.</span>
+          <div>
+            <p>
+              A synchronized multi-LiDAR recording from a static roadside installation at a
+              highway construction site, released with reproducible train, validation, and
+              test splits.
+            </p>
+            <a class="text-link" href="https://huggingface.co/datasets/iis-esslingen/HighwayScene" rel="noopener">
+              Open HighwayScene on Hugging Face <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
-          <span class="flow-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-          <div class="method-step">
-            <span class="step-number">3</span>
-            <strong>Predict</strong>
-            <span>Classify points against the learned background.</span>
-          </div>
-          <span class="flow-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-          <div class="method-step">
-            <span class="step-number">4</span>
-            <strong>Filter</strong>
-            <span>Enforce spatial consistency in angular or 3D space.</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container is-max-widescreen">
-        <div class="dataset-header has-text-centered">
-          <p class="eyebrow">Dataset</p>
-          <h2 class="title is-3">HighwayScene</h2>
-          <p>
-            A synchronized multi-LiDAR recording from a static roadside installation at a highway construction site.
-          </p>
         </div>
 
         <div class="sensor-grid">
-          <figure>
-            <img src="static/images/highwayscene-solidstate.png" alt="Annotated point cloud from the Blickfeld QB2 solid-state LiDAR.">
-            <figcaption><strong>Blickfeld QB2</strong><br>Solid-state LiDAR · 5 Hz</figcaption>
+          <figure class="sensor-card">
+            <div class="sensor-image">
+              <img src="static/images/highwayscene-tof.png" alt="Annotated Ouster OS0 point cloud.">
+            </div>
+            <figcaption>
+              <span class="sensor-type">Rotating time-of-flight</span>
+              <strong>Ouster OS0</strong>
+              <span>10 Hz</span>
+            </figcaption>
           </figure>
-          <figure>
-            <img src="static/images/highwayscene-tof.png" alt="Annotated point cloud from the Ouster OS0 rotating time-of-flight LiDAR.">
-            <figcaption><strong>Ouster OS0</strong><br>Rotating time-of-flight LiDAR · 10 Hz</figcaption>
+          <figure class="sensor-card">
+            <div class="sensor-image">
+              <img src="static/images/highwayscene-fmcw.png" alt="Annotated AEVA Aeries II point cloud.">
+            </div>
+            <figcaption>
+              <span class="sensor-type">FMCW LiDAR</span>
+              <strong>AEVA Aeries II</strong>
+              <span>10 Hz</span>
+            </figcaption>
           </figure>
-          <figure>
-            <img src="static/images/highwayscene-fmcw.png" alt="Annotated point cloud from the AEVA Aeries II FMCW LiDAR.">
-            <figcaption><strong>AEVA Aeries II</strong><br>FMCW LiDAR · 10 Hz</figcaption>
+          <figure class="sensor-card">
+            <div class="sensor-image">
+              <img src="static/images/highwayscene-solidstate.png" alt="Annotated Blickfeld QB2 point cloud.">
+            </div>
+            <figcaption>
+              <span class="sensor-type">Solid-state time-of-flight</span>
+              <strong>Blickfeld QB2</strong>
+              <span>5 Hz</span>
+            </figcaption>
           </figure>
         </div>
 
-        <div class="dataset-details">
-          <div class="dataset-copy">
-            <h3 class="title is-4">One scene, three sensing principles</h3>
-            <p>
-              All sensors observe the same traffic scene from a fixed roadside position. The published split contains
-              4,000 training, 1,000 validation, and 998 test records. Dynamic references are derived from lane-aligned
-              3D regions for the Ouster and Blickfeld streams and radial velocity for the FMCW stream.
-            </p>
-            <dl class="fact-list">
-              <div><dt>Recording rate</dt><dd>10 Hz; Blickfeld 5 Hz</dd></div>
-              <div><dt>Paper range</dt><dd>100 m</dd></div>
-              <div><dt>Traffic setting</dt><dd>Highway construction zone</dd></div>
-              <div><dt>Evaluation</dt><dd>Point-wise static/dynamic labels</dd></div>
-            </dl>
-          </div>
+        <div class="split-strip" role="list" aria-label="HighwayScene dataset split">
+          <span role="listitem"><strong>4,000</strong> train</span>
+          <span role="listitem"><strong>1,000</strong> validation</span>
+          <span role="listitem"><strong>998</strong> test</span>
+          <span role="listitem"><strong>100 m</strong> benchmark range</span>
         </div>
       </div>
     </section>
 
-    <section class="section section-muted">
-      <div class="container is-max-desktop">
-        <p class="eyebrow">Results</p>
-        <h2 class="title is-3">Strong performance across sensor technologies</h2>
-        <p class="section-intro">
-          Spatial filtering substantially improves precision. On HighwayScene, beam-wise GMM achieves the
-          highest filtered F1 score for all three sensors; density-aware CFTA is the most consistent method
-          across the full cross-dataset benchmark.
-        </p>
-        <div class="result-grid">
-          <div class="result-card">
-            <span>Ouster OS0</span>
-            <strong>99.43</strong>
-            <small>filtered F1 · GMM</small>
+    <section class="section results-section" id="results">
+      <div class="container">
+        <div class="section-heading result-heading">
+          <div>
+            <p class="eyebrow">Benchmark result</p>
+            <h2>High accuracy without a semantic model</h2>
           </div>
-          <div class="result-card">
-            <span>Blickfeld QB2</span>
-            <strong>96.95</strong>
-            <small>filtered F1 · GMM</small>
+          <p>
+            Beam-wise GMM reaches the highest filtered F1 score for all three
+            HighwayScene sensors. Density-aware CFTA is the most consistent method across
+            the complete cross-dataset benchmark.
+          </p>
+        </div>
+
+        <div class="score-grid" role="list" aria-label="Best filtered F1 scores on HighwayScene">
+          <div role="listitem">
+            <h3>Ouster OS0</h3>
+            <strong>99.43<small>%</small></strong>
+            <p>Filtered F1 · GMM</p>
           </div>
-          <div class="result-card">
-            <span>AEVA Aeries II</span>
-            <strong>97.59</strong>
-            <small>filtered F1 · GMM</small>
+          <div role="listitem">
+            <h3>Blickfeld QB2</h3>
+            <strong>96.95<small>%</small></strong>
+            <p>Filtered F1 · GMM</p>
+          </div>
+          <div role="listitem">
+            <h3>AEVA Aeries II</h3>
+            <strong>97.59<small>%</small></strong>
+            <p>Filtered F1 · GMM</p>
           </div>
         </div>
-        <p class="result-note">
-          Values are the best filtered F1 scores on the HighwayScene test split. The benchmark additionally
-          evaluates transfer to four urban CoopScenes sequences.
-        </p>
+
         <div class="qualitative-grid">
           <figure>
-            <img src="static/images/result-highwayscene-fmcw.png" alt="Qualitative HighwayScene FMCW background subtraction result.">
-            <figcaption><strong>HighwayScene</strong><br>Qualitative FMCW result</figcaption>
+            <img src="static/images/result-highwayscene-fmcw.png" alt="Qualitative HighwayScene FMCW background-subtraction result.">
+            <figcaption>
+              <strong>HighwayScene</strong>
+              <span>FMCW result on dense highway traffic</span>
+            </figcaption>
           </figure>
           <figure>
-            <img src="static/images/result-coopscenes.png" alt="Qualitative CoopScenes background subtraction result.">
-            <figcaption><strong>CoopScenes</strong><br>Qualitative urban transfer result</figcaption>
+            <img src="static/images/result-coopscenes.png" alt="Qualitative CoopScenes background-subtraction result.">
+            <figcaption>
+              <strong>CoopScenes</strong>
+              <span>Transfer to an urban cooperative scene</span>
+            </figcaption>
           </figure>
         </div>
-      </div>
-    </section>
 
-    <section class="section" id="resources">
-      <div class="container is-max-desktop">
-        <p class="eyebrow">Resources</p>
-        <h2 class="title is-3">Paper, code, and data</h2>
-        <div class="resource-grid">
-          <article class="resource-card">
-            <span class="resource-icon"><i class="fas fa-file-pdf"></i></span>
-            <div><h3>Paper</h3><p>Accepted at IEEE ITSC 2026.</p><a class="resource-status" href="https://arxiv.org/abs/2608.14868" rel="noopener">Read on arXiv</a></div>
-          </article>
-          <article class="resource-card">
-            <span class="resource-icon"><i class="fab fa-github"></i></span>
-            <div><h3>Method code</h3><p>Reproduction configs and extensible Python implementation.</p><span class="resource-status">Coming soon</span></div>
-          </article>
-          <article class="resource-card">
-            <span class="resource-icon"><i class="fas fa-database"></i></span>
-            <div><h3>HighwayScene dataset</h3><p>Point clouds, synchronized splits, and dataset documentation.</p><a class="resource-status" href="https://huggingface.co/datasets/iis-esslingen/HighwayScene" rel="noopener">View on Hugging Face</a></div>
-          </article>
-          <article class="resource-card">
-            <span class="resource-icon"><i class="fas fa-file-code"></i></span>
-            <div><h3>HighwayScene reader</h3><p>Typed Python bindings and streaming access for the released Protobuf records.</p><a class="resource-status" href="https://github.com/HighwayScene/highwayscene-proto" rel="noopener">highwayscene-proto</a></div>
-          </article>
-          <article class="resource-card">
-            <span class="resource-icon"><i class="fas fa-tags"></i></span>
-            <div><h3>CoopScenes labels</h3><p>Static/dynamic point-wise labels added to the original CoopScenes dataset.</p><a class="resource-status" href="https://huggingface.co/datasets/iis-esslingen/CoopScenes/tree/main/benchmark/3d_object_labels" rel="noopener">View labels on Hugging Face</a></div>
-          </article>
+        <div class="result-footer">
+          <p>Best filtered scores on the HighwayScene test split. Full precision, recall, and cross-scene results are reported in the paper.</p>
+          <a class="text-link" href="https://arxiv.org/abs/2608.14868" rel="noopener">
+            See the full benchmark <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section citation-section">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3">Citation</h2>
-        <pre class="bibtex"><code>@misc{baumann2026beamwise,
+    <section class="section resources-section" id="resources">
+      <div class="container">
+        <div class="section-heading centered-heading resource-heading">
+          <p class="eyebrow">Open resources</p>
+          <h2>Continue with the paper, data, or code</h2>
+          <p>Each resource contains the technical detail intentionally kept off this page.</p>
+        </div>
+
+        <div class="resource-grid">
+          <a class="resource-card resource-paper" href="https://arxiv.org/abs/2608.14868" rel="noopener">
+            <span class="resource-icon"><i class="fas fa-file-lines" aria-hidden="true"></i></span>
+            <span>
+              <small>Paper</small>
+              <strong>Read on arXiv</strong>
+              <em>Methods, experiments, and complete results</em>
+            </span>
+            <i class="fas fa-arrow-up-right-from-square card-arrow" aria-hidden="true"></i>
+          </a>
+          <a class="resource-card resource-data" href="https://huggingface.co/datasets/iis-esslingen/HighwayScene" rel="noopener">
+            <span class="resource-icon"><i class="fas fa-database" aria-hidden="true"></i></span>
+            <span>
+              <small>Dataset</small>
+              <strong>HighwayScene</strong>
+              <em>Records, splits, metadata, and documentation</em>
+            </span>
+            <i class="fas fa-arrow-up-right-from-square card-arrow" aria-hidden="true"></i>
+          </a>
+          <div class="resource-card resource-code is-pending">
+            <span class="resource-icon"><i class="fab fa-github" aria-hidden="true"></i></span>
+            <span>
+              <small>Code</small>
+              <strong>Reproduce and extend</strong>
+              <em>Python implementation and paper configurations</em>
+            </span>
+            <span class="pending-label">Coming soon</span>
+          </div>
+        </div>
+
+        <div class="secondary-resources">
+          <a href="https://github.com/HighwayScene/highwayscene-proto" rel="noopener">
+            <i class="fas fa-file-code" aria-hidden="true"></i>
+            HighwayScene Python reader
+          </a>
+          <a href="https://huggingface.co/datasets/iis-esslingen/CoopScenes/tree/main/benchmark/3d_object_labels" rel="noopener">
+            <i class="fas fa-tags" aria-hidden="true"></i>
+            CoopScenes benchmark labels
+          </a>
+        </div>
+
+        <details class="citation">
+          <summary>
+            <span><i class="fas fa-quote-left" aria-hidden="true"></i> BibTeX citation</span>
+            <i class="fas fa-chevron-down citation-chevron" aria-hidden="true"></i>
+          </summary>
+          <pre><code>@misc{baumann2026beamwise,
   author        = {Alexander Baumann and Marcel Vosshans and Thao Dang},
   title         = {Beam-Wise Statistical Background Subtraction for Static Roadside {LiDAR}: A Cross-Sensor Benchmark Study},
   year          = {2026},
@@ -294,13 +320,20 @@
   url           = {https://arxiv.org/abs/2608.14868},
   note          = {Accepted at IEEE ITSC 2026}
 }</code></pre>
+        </details>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p>HighwayScene · Institute for Intelligent Systems, Esslingen University of Applied Sciences</p>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        HighwayScene ·
+        <a href="https://www.hs-esslingen.de/en/research/projects/research-institutes-groups/iis-institute-for-intelligent-systems" rel="noopener">
+          Institute for Intelligent Systems
+        </a>
+      </p>
+      <p>Esslingen University of Applied Sciences, Germany</p>
       <p class="template-credit">
         Website template adapted from <a href="https://nerfies.github.io/" rel="noopener">Nerfies</a>.
       </p>
