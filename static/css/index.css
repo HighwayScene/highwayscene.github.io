@@ -863,33 +863,6 @@ a.resource-card:hover {
   text-transform: uppercase;
 }
 
-.secondary-resources {
-  align-items: center;
-  border-bottom: 1px solid var(--line);
-  border-top: 1px solid var(--line);
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 1.4rem;
-  padding: 1rem;
-}
-
-.secondary-resources a {
-  color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.secondary-resources a:hover {
-  color: var(--ink);
-}
-
-.secondary-resources i {
-  color: var(--accent-dark);
-  margin-right: 0.35rem;
-}
-
 .citation {
   background: rgb(255 255 255 / 72%);
   border: 1px solid var(--line);
@@ -1121,11 +1094,6 @@ a.resource-card:hover {
     gap: 0.5rem;
   }
 
-  .secondary-resources {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.65rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
