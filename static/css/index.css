@@ -391,6 +391,48 @@ summary:focus-visible {
   max-width: 720px;
 }
 
+.work-section {
+  background:
+    radial-gradient(circle at 82% 12%, rgb(35 142 232 / 10%), transparent 27rem),
+    linear-gradient(180deg, var(--ink), var(--ink-soft));
+  color: #ffffff;
+}
+
+.work-section .section-heading h2 {
+  color: #ffffff;
+}
+
+.work-section .section-heading > p:not(.eyebrow) {
+  color: rgb(255 255 255 / 62%);
+}
+
+.work-section .contribution-card {
+  background: rgb(255 255 255 / 5%);
+  border-color: rgb(255 255 255 / 12%);
+}
+
+.work-section .contribution-card::after {
+  background: radial-gradient(circle, rgb(29 183 164 / 16%), transparent 68%);
+}
+
+.work-section .card-index {
+  color: rgb(255 255 255 / 32%);
+}
+
+.work-section .card-icon {
+  background: rgb(29 183 164 / 13%);
+  border: 1px solid rgb(29 183 164 / 22%);
+  color: var(--accent-light);
+}
+
+.work-section .contribution-card h3 {
+  color: #ffffff;
+}
+
+.work-section .contribution-card p {
+  color: rgb(255 255 255 / 57%);
+}
+
 .contribution-grid {
   display: grid;
   gap: 1rem;
@@ -725,7 +767,7 @@ summary:focus-visible {
 .resource-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 3rem;
 }
 
