@@ -246,7 +246,7 @@ summary:focus-visible {
     transform 160ms ease;
 }
 
-.button:not(.button-disabled):hover {
+.button:hover {
   transform: translateY(-2px);
 }
 
@@ -268,13 +268,6 @@ summary:focus-visible {
 .button-secondary:hover {
   background: var(--surface-soft);
   border-color: #bfd3d1;
-}
-
-.button-disabled {
-  background: rgb(255 255 255 / 55%);
-  border-color: var(--line);
-  color: #98a5aa;
-  cursor: not-allowed;
 }
 
 .hero-visual {
@@ -846,21 +839,6 @@ a.resource-card:hover {
 .card-arrow {
   color: #99aaaf;
   font-size: 0.72rem;
-}
-
-.is-pending {
-  cursor: default;
-}
-
-.pending-label {
-  bottom: 1.2rem;
-  color: #98a5aa;
-  font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  position: absolute;
-  right: 1.2rem;
-  text-transform: uppercase;
 }
 
 .citation {
